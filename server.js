@@ -47,6 +47,19 @@ app.post('/client', (req, res) => {
     }); 
 });
 
+app.all('/receive_sms/', function(request, response) {
+    // Sender's phone number
+    var from_number = request.body.From || request.query.From;
+    // Receiver's phone number - Plivo number
+    var to_number = request.body.To || request.query.To;
+    // The text which was received
+    var text = request.body.Text || request.query.Text;
+    console.log('Message received - From: ', from_number, ', To: ', to_number, ', Text: ', text);
+    response.send("Message received");
+});
+
+
+
 // Define port
 const port = 3000;
 
