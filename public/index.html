@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ClientSMS</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+
+</head>
+
+<body>
+  <video id="myVideo" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+  </video>
+
+  <div id="content" class="container-fluid">
+    <div class="row">
+      <div class="text-left">
+        <h1> Do it Dailey SMS</h1>
+        <h2>send notifications to clients <br>
+          at the blink of an eye</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mx-auto float-left">
+          <form id="submitInfo">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Number</span>
+              </div>
+              <input name="number" id="phoneNum" placeholder="Enter the number" aria-label="Number">
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Message</span>
+              </div>
+              <textarea aria-label="Message" rows="5" cols="60" id="messageSent" name="message" placeholder="Enter your message...">
+              </textarea>
+            </div>
+            <button class="btn btn-info btn-lg" type='submit'>submit</button>
+          </form>
+          <p class="mb-0">
+            Created by <a href="https://rockymia50.github.io/RogerMcIntosh/">Yottabyte Media</a>
+          </p>
+
+        </div>
+
+        <!-- //Response
+        <div class="col-md-12 mx-auto float-right">
+          <form id="submitInfo">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Number</span>
+              </div>
+              <input name="number" id="phoneNumRec" placeholder="Client number" aria-label="Number">
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Message Received</span>
+              </div>
+              <textarea aria-label="Message" rows="5" cols="60" id="messageRec" name="message" placeholder=" Their message...">
+            </textarea>
+            </div>
+          </form>
+        </div> -->
+      </div>
+    </div>
+  </div>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+</body>
+
+</html>
